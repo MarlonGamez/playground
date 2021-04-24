@@ -9,7 +9,9 @@
 #include <algorithm>
 
 #include "Renderer.h"
+#include "VertexArray.h"
 #include "VertexBuffer.h"
+#include "VertexBufferLayout.h"
 #include "IndexBuffer.h"
 
 enum ShaderType { vertex, fragment };
@@ -159,14 +161,13 @@ int main(void)
             2, 3, 0,
         };
 
-        unsigned int vao;
-        GLCall(glGenVertexArrays(1, &vao));
-        GLCall(glBindVertexArray(vao));
-
+        
+        VertexArray vao;
         VertexBuffer vbo(positions, 4 * 2 * sizeof(float));
 
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
+        VertexBufferLayout layout;
+        layout.Push<float>(2);
+        vao.AddBuffer(vbo, layout);
 
         // index buffer
         IndexBuffer ibo(indices, 6);
@@ -196,7 +197,7 @@ int main(void)
             GLCall(glUseProgram(shader));
             GLCall(glUniform4f(location, r, 0.3f, 0.8f, 1.0f));
 
-            GLCall(glBindVertexArray(vao));
+            vao.Bind();
             ibo.Bind();
 
             GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));

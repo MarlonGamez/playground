@@ -72,10 +72,10 @@ int main(void)
         shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
 
         // Unbind everything
-        vao.UnBind();
+        vao.Unbind();
         shader.Unbind();
-        vbo.UnBind();
-        ibo.UnBind();
+        vbo.Unbind();
+        ibo.Unbind();
 
         float r = 0.0f;
         float increment = 0.05f;

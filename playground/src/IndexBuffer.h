@@ -10,7 +10,7 @@ public:
 	~IndexBuffer();
 
 	void Bind();
-	void UnBind();
+	void Unbind();
 
 	inline unsigned int GetCount() const { return m_Count; };
 };

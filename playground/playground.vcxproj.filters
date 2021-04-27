@@ -30,10 +30,23 @@
     <ClCompile Include="src\VertexArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\vert.shader" />
     <None Include="res\shaders\frag.shader" />
+    <None Include="dep\GLEW\doc\advanced.html" />
+    <None Include="dep\GLEW\doc\basic.html" />
+    <None Include="dep\GLEW\doc\build.html" />
+    <None Include="dep\GLEW\doc\credits.html" />
+    <None Include="dep\GLEW\doc\glew.html" />
+    <None Include="dep\GLEW\doc\glxew.html" />
+    <None Include="dep\GLEW\doc\index.html" />
+    <None Include="dep\GLEW\doc\install.html" />
+    <None Include="dep\GLEW\doc\log.html" />
+    <None Include="dep\GLEW\doc\wglew.html" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer.h">
@@ -49,6 +62,27 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\VertexBufferLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep\GLEW\include\GL\eglew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep\GLEW\include\GL\glew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep\GLEW\include\GL\glxew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep\GLEW\include\GL\wglew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep\GLFW\include\GLFW\glfw3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep\GLFW\include\GLFW\glfw3native.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

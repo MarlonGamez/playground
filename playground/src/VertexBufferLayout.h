@@ -4,7 +4,7 @@
 
 #include <vector>
 
-#include "Renderer.h" 
+#include "util/GL.h" 
 
 struct VertexBufferElement
 {

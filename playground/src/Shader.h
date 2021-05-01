@@ -5,7 +5,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "Renderer.h"
+#include "util/GL.h"
 
 enum ShaderType { vertex, fragment };
 
